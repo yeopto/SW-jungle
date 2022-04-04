@@ -13,7 +13,7 @@ def solution(n):
     if i < 100:
       count += 1
     elif i >= 100 and i < 1000:
-      if (hundNum - tenNum) == (tenNum - oneNum):
+      if (hundNum - tenNum) == (tenNum - oneNum): # 등차수열 로직
         count += 1
   
   return count
