@@ -12,7 +12,7 @@ for i in range(M):
     graph[a].append(b)
     graph[b].append(a)
 
-for i in range(1, N + 1):
+for i in range(1, N + 1): # 정점의 번호가 작은 것 부터 먼저 방문하라함
     graph[i].sort()
 
 def dfs(v):
