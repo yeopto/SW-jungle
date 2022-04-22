@@ -1,44 +1,39 @@
 import sys
 from collections import deque
-
 input = sys.stdin.readline
 
-n = int(input())
-graph = []
-cnt = []
+N = int(input())
+graph = [list(map(int, input().rstrip())) for _ in range(N)]
+nums = []
 
-for _ in range(n):
-    graph.append(list(map(int, input().rstrip())))
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
 
-dx = [-1, 0, 1, 0]
-dy = [0, 1, 0, -1]
-
-def bfs(graph, a, b):
+def bfs(a, b):
     q = deque()
     q.append((a, b))
     graph[a][b] = 0
     count = 1
-    
+
     while q:
         x, y = q.popleft()
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
-            if nx < 0 or nx >= n or ny < 0 or ny >= n:
+            if 0 > nx or N <= nx or 0 > ny or N <= ny:
                 continue
             if graph[nx][ny] == 1:
-                graph[nx][ny] = 0
                 q.append((nx, ny))
+                graph[nx][ny] = 0
                 count += 1
     return count
 
-for i in range(n):
-    for j in range(n):
+for i in range(N):
+    for j in range(N):
         if graph[i][j] == 1:
-            cnt.append(bfs(graph, i, j))
+            nums.append(bfs(i, j))
 
-cnt.sort()
-print(len(cnt))
-
-for i in cnt:
-    print(i)
+nums.sort()
+print(len(nums))
+for num in nums:
+    print(num)
