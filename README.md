@@ -10,3 +10,4 @@
 - [WEEK05](https://velog.io/@yeopto/WEEK05) [rbtree-lab](https://github.com/yeopto/rbtree-lab) 22.04.28 ~ 22.05.04
 - [WEEK06](https://velog.io/@yeopto/WEEK06) [malloc-lab](https://github.com/yeopto/malloc-lab) 22.05.05 ~ 22.05.11
 - [WEEK07](https://velog.io/@yeopto/WEEK07) [webproxy](https://github.com/yeopto/webproxy) 22.05.12 ~ 22.05.18
+- [WEEK08](https://velog.io/@yeopto/WEEK08) [pintOS-project-1](https://github.com/SWJungle4A/pintos12-team04/tree/yeopto/priority-scheduling)
